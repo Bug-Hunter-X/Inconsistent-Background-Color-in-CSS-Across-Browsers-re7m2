@@ -1,0 +1,13 @@
+The following CSS code snippet demonstrates an unusual issue where the background color is not applied consistently across different browsers or rendering engines.  This can occur if the selector is too specific or if there are conflicting stylesheets:
+
+```css
+.container {
+  background-color: #f0f0f0;
+}
+
+.container p {
+  background-color: #ffffff; /* This might override the parent's background */
+}
+```
+
+In some cases, the `p` element's background color might unexpectedly cover the parent container's background, leading to inconsistencies across different browsers or rendering engines.
