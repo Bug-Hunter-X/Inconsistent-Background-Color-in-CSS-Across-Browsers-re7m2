@@ -1,0 +1,22 @@
+The solution involves addressing the CSS specificity. One approach is to use the `!important` flag (although generally discouraged for maintainability):
+
+```css
+.container {
+  background-color: #f0f0f0 !important;
+}
+
+.container p {
+  background-color: #ffffff;
+}
+```
+A better solution is to refactor the CSS, perhaps by using a different selector that is more specific to the container and avoid directly specifying background color for the `p` element, allowing inheritance to work as expected or using a different approach altogether that achieves the desired layout without conflicting backgrounds. For example, if you want to change the text color, use this:
+
+```css
+.container {
+  background-color: #f0f0f0;
+}
+
+.container p {
+  color: #000000; /*Change text color instead of background*/
+}
+```
